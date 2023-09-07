@@ -1,0 +1,973 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#wrap {
+  width: 100%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  opacity: 0.8;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 0.5px solid lightgray;
+  z-index: 3;
+}
+
+.header_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  width: 54px;
+  height: 24px;
+  margin-left: 25px;
+}
+
+.header_logo > img {
+  width: 54px;
+  height: 24px;
+}
+
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.menu_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.menu_ul > li {
+  padding: 12px 24px;
+  font-weight: 700;
+  font-family: "HallymGothic-Regular";
+  font-size: 15.5px;
+}
+
+.login {
+  border: none;
+  background-color: black;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.login:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "HallymGothic-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+#slider {
+  width: 100%;
+  height: 820px;
+  padding: 64px 0;
+  background: linear-gradient(#f8faff 67.5%, #f0f4ff 0);
+}
+
+.slider_wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url(../img/slider.png);
+  background-size: 765px;
+  background-repeat: no-repeat;
+  background-position: 96% 55%;
+}
+
+.slide_box {
+  background-image: url(../img/slide_box.png);
+  height: 223px;
+  background-size: 346px;
+  background-repeat: no-repeat;
+}
+
+.slide_logo {
+  background-image: url(../img/slide_logo.png);
+  background-size: 178px;
+  height: 47px;
+  background-repeat: no-repeat;
+  margin-top: 310px;
+}
+
+section {
+  width: 100%;
+  height: 980px;
+}
+
+.section_title {
+  width: 30%;
+  height: 25%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.section_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.section_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.section_ani {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ani1 {
+  width: 100%;
+  height: 32%;
+  background-image: url(../img/ani1.png);
+  animation: characterRight 200s linear infinite;
+  background-repeat: repeat-x;
+}
+
+.ani2 {
+  width: 100%;
+  height: 32%;
+  background-image: url(../img/ani2.png);
+  animation: characterLeft 200s linear infinite;
+  background-repeat: repeat-x;
+}
+
+.ani3 {
+  width: 100%;
+  height: 32%;
+  background-image: url(../img/ani3.png);
+  animation: characterRight 200s linear infinite;
+  background-repeat: repeat-x;
+}
+
+#mid_banner {
+  width: 100%;
+  height: 920px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.mid_banner_title {
+  width: 30%;
+  height: 25%;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 70px;
+}
+
+.mid_banner_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.mid_banner_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.mid_banner_video {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mid_banner_img {
+  width: 730px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.mid_banner_img > img {
+  width: 730px;
+  height: 410px;
+  margin: 0 auto;
+}
+
+.mid_banner_img::after {
+  content: "";
+  background-image: url(../img/mid_banner_video_after.png);
+  background-size: 56px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.mid_video {
+  width: 730px;
+  height: 410px;
+  margin: 0 auto;
+  display: none;
+}
+
+.mid_video > video {
+  width: 730px;
+  height: 410px;
+  margin: 0 auto;
+}
+
+.mid_banner_button {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mid_banner_button > button {
+  border: 1px solid black;
+  padding: 15px 30px;
+  background-color: #f7f7f7;
+  border-radius: 30px;
+  font-family: "HallymGothic-Regular";
+  cursor: pointer;
+}
+
+.mid_banner_button > button:hover {
+  background-color: black;
+  color: #f0f4ff;
+}
+
+#index {
+  width: 100%;
+  height: 2000px;
+}
+
+.index_title {
+  width: 30%;
+  height: 15%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.index_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.index_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.index_wrap {
+  width: 1200px;
+  height: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.index_book {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.index_book > h3 {
+  width: 100%;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.lab {
+  width: 13.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.lab > img {
+  width: 145px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.lab > h3 {
+  font-family: "HallymGothic-Regular";
+  font-size: 14px;
+  text-align: center;
+  width: 145px;
+  height: 38px;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.lab > h6 {
+  margin-top: 10px;
+}
+
+#mid_bottom {
+  width: 100%;
+  height: 690px;
+  margin-bottom: 50px;
+}
+
+.mid_bottom_title {
+  width: 30%;
+  height: 40%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.mid_bottom_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mid_bottom_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.mid_bottom_ul {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.mid_bottom_ul > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.mid_bottom_ul > ul > li {
+  margin-right: 25px;
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.mid_bottom_ul > ul > li:hover {
+  cursor: pointer;
+}
+
+.lab_a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lab_b {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lab_c {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lab_d {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lab_e {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mid_bottom_lab {
+  width: 1200px;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.box {
+  width: 13.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box > img {
+  width: 145px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.box > h3 {
+  font-family: "HallymGothic-Regular";
+  font-size: 14px;
+  text-align: center;
+  width: 145px;
+  height: 38px;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.box > h6 {
+  margin-top: 10px;
+}
+
+#mid_ad {
+  width: 100%;
+  height: 920px;
+  background-color: #f7f7f7;
+}
+
+.ad_wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.ad_title {
+  width: 35%;
+  height: 40%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.ad_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ad_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.ad_img {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+.ad_img > img:nth-child(1) {
+  width: 172px;
+  height: 172px;
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+}
+
+.ad_img > img:nth-child(2) {
+  width: 172px;
+  height: 172px;
+  position: absolute;
+  top: 120px;
+  left: 180px;
+}
+
+.ad_img > img:nth-child(3) {
+  width: 410px;
+  height: 502px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.ad_img > img:nth-child(4) {
+  width: 417px;
+  height: 153px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+}
+
+.ad_img > img:nth-child(5) {
+  width: 172px;
+  height: 172px;
+  position: absolute;
+  top: 120px;
+  right: 180px;
+}
+
+.ad_img > img:nth-child(6) {
+  width: 172px;
+  height: 172px;
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+}
+
+#bottom_banner {
+  width: 100%;
+  height: 770px;
+  background-color: #ffeb60;
+}
+
+.bot_banner {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.bot_banner_title {
+  width: 40%;
+  height: 35%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.bot_banner_title > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 49px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bot_banner_title > h4 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  font-weight: 400;
+}
+
+.bot_banner_sale {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale_box {
+  width: 27.5%;
+  height: 62%;
+  border-radius: 20px;
+}
+
+.sale1 {
+  margin-right: 25px;
+  padding: 32px;
+  position: relative;
+  background-color: #fff;
+}
+
+.sale1 > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.sale1 > h3 {
+  font-family: "HallymGothic-Regular";
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.sale1 > h3 > span {
+  font-family: "HallymGothic-Regular";
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.sale1 > h3 > span > b {
+  font-family: "HallymGothic-Regular";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sale1 > h4 {
+  margin-left: 30px;
+  font-size: 18px;
+  color: #999;
+  font-weight: 100;
+  text-decoration: line-through;
+}
+
+.sale1 > img {
+  position: absolute;
+  width: 57px;
+  height: 28.5px;
+  left: 130px;
+}
+
+.sale1 > p {
+  font-family: "HallymGothic-Regular";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #777;
+}
+
+.sale2 {
+  margin-right: 25px;
+  padding: 32px;
+  position: relative;
+  background-color: #fff;
+}
+
+.sale2 > h2 {
+  font-family: "HallymGothic-Regular";
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.sale2 > h3 {
+  font-family: "HallymGothic-Regular";
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.sale2 > h3 > span {
+  font-family: "HallymGothic-Regular";
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.sale2 > h3 > span > b {
+  font-family: "HallymGothic-Regular";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sale2 > h4 {
+  margin-left: 30px;
+  font-size: 18px;
+  color: #999;
+  font-weight: 100;
+  text-decoration: line-through;
+}
+
+.sale2 > img {
+  position: absolute;
+  width: 57px;
+  height: 28.5px;
+  left: 130px;
+}
+
+.sale2 > p {
+  font-family: "HallymGothic-Regular";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #777;
+}
+
+.sale3 {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sale3_u {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.sale3_u > img {
+  width: 72px;
+  height: 72px;
+}
+
+.sale3_u > p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.sale3_d {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sale3_d > img {
+  width: 72px;
+  height: 72px;
+}
+
+.sale3_d > p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+#bottom_menu {
+  width: 100%;
+  height: 935px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bot_menu_title {
+  width: 100%;
+  height: 11%;
+}
+
+.bot_menu_title_wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.bot_menu_listen {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot_menu_listen:hover {
+  cursor: pointer;
+}
+
+.bot_menu_listen > img {
+  width: 24px;
+  height: 24px;
+}
+
+.bot_menu_listen > p {
+  font-size: 13px;
+  font-family: "HallymGothic-Regular";
+  font-weight: 700;
+}
+
+.bot_menu_viewer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot_menu_viewer:hover {
+  cursor: pointer;
+}
+
+.bot_menu_viewer > img {
+  width: 24px;
+  height: 24px;
+}
+
+.bot_menu_viewer > p {
+  font-size: 13px;
+  font-family: "HallymGothic-Regular";
+  font-weight: 700;
+}
+
+.bot_menu_wrap {
+  width: 100%;
+  height: 89%;
+  background-color: #f7f7f7;
+}
+
+.bot_menu_place {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.bot_place_listen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.place_listen_l {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.listen_u {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.listen_u > img {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 30px;
+}
+
+.listen_u > h1 {
+  font-size: 49px;
+  line-height: 130%;
+  font-family: "HallymGothic-Regular";
+  margin-bottom: 30px;
+}
+
+.listen_u > h3 {
+  font-family: "HallymGothic-Regular";
+  font-size: 22px;
+  line-height: 160%;
+  color: #777;
+}
+
+.listen_d {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.view1 {
+  display: block;
+}
+
+.view2 {
+  display: none;
+}
+
+.view3 {
+  display: none;
+}
+
+.view4 {
+  display: none;
+}
+
+.listenbox {
+  width: 80%;
+}
+
+.bot_place_viewer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: row;
+}
+
+.place_viewer_l {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes characterRight {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10000px 0;
+  }
+}
+@keyframes characterLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 10000px 0;
+  }
+}

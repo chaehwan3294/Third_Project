@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_wrap">
+                <div class="header_logo">
+                    <img src="img/header_logo.png" alt="logo1">
+                </div>
+                <div class="header_menu">
+                    <ul class="menu_ul">
+                        <li><a href="#">기업문의</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">계정관리</a></li>
+                    </ul>
+                    <button class="login">로그인</button>
+                </div>
+            </div>
+        </header>
+
+        <div id="slider">
+            <div class="slider_wrap">
+                <div class="slide_box">
+                </div>
+                <div class="slide_logo">
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="section_title">
+                <h2>
+                당신을 기다리는 <br>
+                15만권의 도서
+                </h2>
+                <h4>
+                첫 달 무료 구독을 통해<br>
+                어떤 도서가 있는지 확인해보세요
+                </h4>
+            </div>
+            <div class="section_ani">
+                <div class="ani1"></div>
+                <div class="ani2"></div>
+                <div class="ani3"></div>
+            </div>
+        </section>
+
+        <div id="mid_banner">
+            <div class="mid_banner_title">
+                <h2>
+                    나만의 공간을 아름답게 <br>
+                    채워주는 오브제북
+                </h2>
+                <h4>
+                    이미지와 사운드로 그대화된<br>
+                    책의 감성을 오롯이 느껴보세요.
+                </h4>
+            </div>
+            <div class="mid_banner_video">
+                <div class="mid_banner_img">
+                    <img src="img/mid_banner_video.jpg" alt="mid_video">
+                </div>
+                <div class="mid_video">
+                    <video src="video/objectbook.mp4" muted autoplay></video>
+                </div>
+            </div>
+            <div class="mid_banner_button">
+                <button>오브제북 보러가기 ></button>
+            </div>
+        </div>
+
+        <div id="index">
+            <div class="index_title">
+                <h2>
+                    싹 다 무제한 <br>
+                    9,900원
+                </h2>
+                <h4>
+                    10년치 베스트 셀러<br>
+                    신간 오디오북 장르 소설까지
+                </h4>
+            </div>
+            <div class="index_wrap">
+                <div class="index_book book1">
+                    <h3>지금 서점 베스트 셀러</h3>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                    <div class="lab1 lab"></div>
+                </div>
+                <div class="index_book book2">
+                    <h3>스티븐 킹 모음전</h3>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                    <div class="lab2 lab"></div>
+                </div>
+                <div class="index_book book3">
+                    <h3>베르나르 베르베르 모음전</h3>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                    <div class="lab3 lab"></div>
+                </div>
+                <div class="index_book book4">
+                    <h3>댄 브라운 모음전</h3>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                    <div class="lab4 lab"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var search;
+            search=["이상","이","스티븐 킹","베르나르 베르베르","댄 브라운"]
+
+            for(i=0;i<search.length;i++){
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: search[i] },
+                async: false,
+                headers: { Authorization: "KakaoAK fd08f36bd9fb9e3c842768cd0731e0b4" }
+            })
+            .done(function (msg) {
+
+            var lab = document.getElementsByClassName("lab"+i);
+
+            for (var j = 0; j < lab.length; j++) {
+
+            $(".lab"+i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
+            $(".lab"+i).eq(j).append("<h3>" +msg.documents[j].title + "</h3>");
+            $(".lab"+i).eq(j).append("<h6>" + msg.documents[j].authors + "</h6>");
+                }
+            });
+        }
+        </script>
+
+        <div id="mid_bottom">
+            <div class="mid_bottom_title">
+                <h2>
+                    관심 분야에 있는 책도 <br>
+                    딱 골라드려요
+                </h2>
+                <h4>
+                    검색어 순위를 통해 뽑은<br>
+                    인기 분야 책들을 확인해보세요
+                </h4>
+            </div>
+            <div class="mid_bottom_ul">
+                <ul>
+                    <li>주식</li>
+                    <li>영어</li>
+                    <li>고전</li>
+                    <li>인테리어</li>
+                    <li>운동</li>
+                </ul>
+            </div>
+            <div class="mid_bottom_lab lab_a">
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+                <div class="box0 box"></div>
+            </div>
+            <div class="mid_bottom_lab lab_b">
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+                <div class="box1 box"></div>
+            </div>
+            <div class="mid_bottom_lab lab_c">
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+                <div class="box2 box"></div>
+            </div>
+            <div class="mid_bottom_lab lab_d">
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+                <div class="box3 box"></div>
+            </div>
+            <div class="mid_bottom_lab lab_e">
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+                <div class="box4 box"></div>
+            </div>
+        </div>
+
+        <script>
+            var search;
+            search=["경제","영어","고전","인테리어","운동"]
+
+            for(i=0;i<search.length;i++){
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: search[i] },
+                async: false,
+                headers: { Authorization: "KakaoAK fd08f36bd9fb9e3c842768cd0731e0b4" }
+            })
+            .done(function (msg) {
+
+            var lab = document.getElementsByClassName("box"+i);
+
+            for (var j = 0; j < lab.length; j++) {
+
+            $(".box"+i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
+            $(".box"+i).eq(j).append("<h3>" +msg.documents[j].title + "</h3>");
+            $(".box"+i).eq(j).append("<h6>" + msg.documents[j].authors + "</h6>");
+                }
+            });
+        }
+        $(".mid_bottom_ul li").click(function(){
+                    let i=$(this).index();
+
+                    $(".mid_bottom_lab").eq(i).show().css("display","flex").siblings(".mid_bottom_lab").hide()
+                });
+        </script>
+
+        <div id="mid_ad">
+            <div class="ad_wrap">
+                <div class="ad_title">
+                    <h2>
+                        당신이 끝까지 읽을 책을 <br>
+                        알려주는 완독지수
+                    </h2>
+                    <h4>
+                        검색어 순위를 통해 뽑은<br>
+                        인기 분야 책들을 확인해보세요
+                    </h4>
+                </div>
+                <div class="ad_img">
+                    <img src="img/ad_img1.png" alt="ad_img1">
+                    <img src="img/ad_img2.png" alt="ad_img2">
+                    <img src="img/ad_img3.png" alt="ad_img3">
+                    <img src="img/ad_img4.png" alt="ad_img4">
+                    <img src="img/ad_img5.png" alt="ad_img5">
+                    <img src="img/ad_img6.png" alt="ad_img6">
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom_banner">
+            <div class="bot_banner">
+                <div class="bot_banner_title">
+                    <h2>
+                        언제든 해지 가능! <br>
+                        첫 달 무료로 가볍게
+                    </h2>
+                    <h4>
+                        상황에 맞게 원하는 요금제를<br>
+                        자유롭게 선택하세요
+                    </h4>
+                </div>
+                <div class="bot_banner_sale">
+                    <div class="sale_box sale1">
+                        <h2>전자책 정기구독</h2>
+                        <br>
+                        <h3>월 <span>9,900<b>원</b></span></h3>
+                        <br>
+                        <img src="img/sale1.png" alt="sale1">
+                        <h4>118,800</h4>
+                        <h3>연 <span>99,900<b>원</b></span></h3>
+                        <br>
+                        <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
+                    </div>
+                    <div class="sale_box sale2">
+                        <h2>종이책 정기구독</h2>
+                        <br>
+                        <h3>월 <span>15,900<b>원</b></span></h3>
+                        <br>
+                        <img src="img/sale2.png" alt="sale1">
+                        <h4>202,800</h4>
+                        <h3>연 <span>183,000<b>원</b></span></h3>
+                        <br>
+                        <p>
+                            밀리의 모든 콘텐츠를 무제한으로 보고 <br>
+                            2달에 1번 종이책+전자책 배송까지
+                        </p>
+                    </div>
+                    <div class="sale_box sale3">
+                        <div class="sale3_u">
+                            <img src="img/sale3_u.png" alt="sale3_u">
+                            <p>
+                                무료 체험 기간 동안 해지해도<br>
+                                금액이 청구되지 않아요
+                            </p>
+                        </div>
+                        <div class="sale3_d">
+                            <img src="img/sale3_d.png" alt="sale3_d">
+                            <p>
+                                유료 결제되어도 사용 이력이<br>
+                                없으면 즉시 환불해드려요
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom_menu">
+            <div class="bot_menu_title">
+                <dic class="bot_menu_title_wrap">
+                    <div class="bot_menu_listen">
+                        <img src="img/listen.png" alt="listen">
+                        <p>오디오북</p>
+                    </div>
+                    <div class="bot_menu_viewer">
+                        <img src="img/viewer.png" alt="viewer">
+                        <p>밀리 뷰어</p>
+                    </div>
+                </dic>
+            </div>
+            <div class="bot_menu_wrap">
+                <div class="bot_menu_place">
+                    <div class="bot_place_listen">
+                        <div class="place_listen_l">
+                            <div class="listen_u">
+                                <img src="img/listen_u.png" alt="listen_u">
+                                <h1>오디오북</h1>
+                                <h3>
+                                    세상에서 가장 <br>
+                                    교양있는 수면제
+                                </h3>
+                            </div>
+                            <div class="listen_d">
+                                <div class="listenbox view1">
+                                    <h2>
+                                        <b>하루의 시작과 마무리를 오디오북과 함께</b> <br>
+                                        지하철에서도, 잠들기 전에도 독서하세요
+                                    </h2>
+                                </div>
+                                <div class="listenbox view2">
+
+                                </div>
+                                <div class="listenbox view3">
+
+                                </div>
+                                <div class="listenbox view4">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place_listen_r">
+
+                        </div>
+                    </div>
+                    <div class="bot_place_viewer">
+                        <div class="place_viewer_l">
+                            <div class="viewer_u">
+                                <img src="img/listen_u.png" alt="listen_u">
+                                
+                            </div>
+                            <div class="viewer_d">
+                                <div class="viewerbox view1">
+
+                                </div>
+                                <div class="viewerbox view2">
+
+                                </div>
+                                <div class="viewerbox view3">
+
+                                </div>
+                                <div class="viewerbox view4">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place_viewer_r">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
