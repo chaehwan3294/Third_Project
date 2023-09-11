@@ -253,6 +253,7 @@
         $(".mid_bottom_ul li").click(function(){
                     let i=$(this).index();
 
+                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"white","color":"black"})
                     $(".mid_bottom_lab").eq(i).show().css("display","flex").siblings(".mid_bottom_lab").hide()
                 });
         </script>
@@ -364,61 +365,275 @@
                                 </h3>
                             </div>
                             <div class="listen_d">
-                                <div class="listenbox view1">
+                                <div class="listenbox listen1">
                                     <h2>
                                         <b>하루의 시작과 마무리를 오디오북과 함께</b> <br>
                                         지하철에서도, 잠들기 전에도 독서하세요
                                     </h2>
                                 </div>
-                                <div class="listenbox view2">
-
+                                <div class="listenbox listen2">
+                                    <h2>
+                                        <b>귀로 듣다가 눈으로도 같이 보면</b> <br>
+                                        더 내용이 잘 이해돼요
+                                    </h2>
                                 </div>
-                                <div class="listenbox view3">
-
+                                <div class="listenbox listen3">
+                                    <h2>
+                                        <b>30분만에 책 요약</b> <br>
+                                        핵심만 쏙 골라 읽어주는 오디오북
+                                    </h2>
                                 </div>
-                                <div class="listenbox view4">
-                                    
+                                <div class="listenbox listen4">
+                                    <h2>
+                                        <b>이제훈부터 옥주현까지</b> <br>
+                                        셀럽이 읽어주는 오디오북
+                                    </h2>
+                                </div>
+                                <div class="listenbox_num">
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="place_listen_r">
-
+                            <img src="img/listen_r.png" alt="listen_r">
+                            <div class="listen_r_img listen_img1">
+                                <img src="img/listen_r_img1.png" alt="listen_img1">
+                            </div>
+                            <div class="listen_r_img listen_img2">
+                                <video src="video/listen_r_img2.mp4" muted autoplay></video>
+                            </div>
+                            <div class="listen_r_img listen_img3">
+                                <img src="img/listen_r_img3.png" alt="listen_img3">
+                            </div>
+                            <div class="listen_r_img listen_img4">
+                                <img src="img/listen_r_img4.png" alt="listen_img4">
+                            </div>
                         </div>
                     </div>
                     <div class="bot_place_viewer">
                         <div class="place_viewer_l">
                             <div class="viewer_u">
-                                <img src="img/listen_u.png" alt="listen_u">
-                                
+                                <img src="img/viewer_u.png" alt="viewer_u">
+                                <h1>밀리 뷰어</h1>
+                                <h3>
+                                    독서를 위한 가장<br>
+                                    완벽한 도구
+                                </h3>
                             </div>
                             <div class="viewer_d">
                                 <div class="viewerbox view1">
-
+                                    <h2>
+                                        <b>시선 추적 기능</b> <br>
+                                        눈동자로 페이지를 넘길 수 있어요
+                                    </h2>
                                 </div>
                                 <div class="viewerbox view2">
-
+                                    <h2>
+                                        <b>어느 기기에서도 OK</b> <br>
+                                        스마트폰, 태블릿, PC, E ink 기기까지
+                                    </h2>
                                 </div>
                                 <div class="viewerbox view3">
-
+                                    <h2>
+                                        <b>다크 모드</b> <br>
+                                        전자책이 눈 아프다는 편견은 버려요
+                                    </h2>
                                 </div>
                                 <div class="viewerbox view4">
-
+                                    <h2>
+                                        <b>자유로운 보기 설정</b> <br>
+                                        줄간격부터 폰트까지 내 마음대로 설정하면 <br>
+                                        더욱 편한 독서를 할 수 있어요
+                                    </h2>
+                                </div>
+                                <div class="viewerbox_num">
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="place_viewer_r">
-
+                            <img src="img/listen_r.png" alt="listen_r">
+                            <div class="viewer_r_img viewer_img1">
+                                <video src="video/viewer1.mp4" muted autoplay></video>
+                            </div>
+                            <div class="viewer_r_img viewer_img2">
+                                <img src="img/viewer2.png" alt="viewer2">
+                            </div>
+                            <div class="viewer_r_img viewer_img3">
+                                <video src="video/viewer3.mp4" muted autoplay></video>
+                            </div>
+                            <div class="viewer_r_img viewer_img4">
+                                <video src="video/viewer4.mp4" muted autoplay></video>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <script>
+                    $(".bot_menu_title_wrap").children().click(function(){
+                        let i=$(this).index();
+                        console.log(i)
 
+                        $(this).css({"background-color":"#f7f7f7"}).siblings().css({"background-color":"white"})
+                        $(".bot_menu_place").children().eq(i).show().css("display","flex").siblings().hide()
+                    })
 
+                    //listen
+                    $(".listenbox_num > ul > li").click(function(){
+                    let i=$(this).index();
+                    
+                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"#f7f7f7","color":"black"})
+                    $(".listenbox").eq(i).show().css("display","flex").siblings(".listenbox").hide()
+                    $(".listen_r_img").eq(i).show().css("display","block").siblings(".listen_r_img").hide()
+                    });
+
+                    //viewer
+                    $(".viewerbox_num > ul > li").click(function(){
+                    let i=$(this).index();
+                    
+                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"#f7f7f7","color":"black"})
+                    $(".viewerbox").eq(i).show().css("display","flex").siblings(".viewerbox").hide()
+                    $(".viewer_r_img").eq(i).show().css("display","block").siblings(".viewer_r_img").hide()
+                });
+        </script>
+
+        <div id="review">
+            <div class="review_wrap">
+                <div class="review_img">
+                    <img src="img/review2.png" alt="review2">
+                </div>
+                <div class="review_text">
+                    <h1>내돈내산 <br>
+                    밀리 구독 이야기</h1>
+                    <h3>패션 브랜드 대표부터 <br>
+                    고등학교 교사까지!</h3>
+                </div>
+            </div>
+            <div class="review_background">
+                
+            </div>
+        </div>
+
+        <div id="qna">
+            <div class="qna_wrap">
+                <div class="qna_title">
+                    <h1>자주 묻는 질문</h1>
+                </div>
+                <div class="qna_index">
+                    <div class="qna_index_num index_num1">
+                        <div class="qna_num_title">
+                            <h3>안쓰면 정말 환불해 주나요?</h3>
+                            <img src="img/down.png" alt="down">
+                        </div>
+                        <p>
+                            물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요. <br>
+                            <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인] </b>에서 직접 환불이 가능하며 <br>,
+                            해경이 어려운 경우 고객센터로 문의해 주세요.
+                        </p>
+                    </div>
+                    <div class="qna_index_num index_num2">
+                        <div class="qna_num_title">
+                            <h3>구독 중 해지 할 수 있나요? 수수료는 없나요?</h3>
+                            <img src="img/down.png" alt="down">
+                        </div>
+                        <p>
+                            다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다. <br>
+                            <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인] </b>메뉴를 통해 기간에 상관없이 직접 가능해요.
+                        </p>
+                    </div>
+                    <div class="qna_index_num index_num3">
+                        <div class="qna_num_title">
+                            <h3>무료 혜택은 누구나 받을 수 있나요?</h3>
+                            <img src="img/down.png" alt="down">
+                        </div>
+                        <p>
+                            네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 첫 달 무료 혜택이 제공됩니다. <br>
+                            단, 종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다. <br>
+                            아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.
+                        </p>
+                    </div>
+                    <div class="qna_index_num index_num4">
+                        <div class="qna_num_title">
+                            <h3>어떤 기기에서 사용할 수 있나요?</h3>
+                            <img src="img/down.png" alt="down">
+                        </div>
+                        <p>
+                            아래 기기와 버전에서 밀리를 사용할 수 있습니다. <br>
+                            - 휴대폰 / 태블릿 : IOS13, Android 6 이상 지원 <br>
+                            - PC : Mac Yosemite, Window 10 이상 지원 <br>
+                            - E ink : Android 4,4 이상 지원 <br>
+                            (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8등)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+        </script>
 
         <footer>
-
+            <div class="footer_wrap">
+                <div class="footer_title">
+                    <h3>(주)밀리의 서재</h3>
+                    <div class="footer_sns">
+                        <img src="img/insta.png" alt="insta">
+                        <img src="img/youtube.png" alt="youtube">
+                        <img src="img/kakao.png" alt="kakao">
+                    </div>
+                </div>
+                <div class="footer_info1">
+                    <button>사업자 정보 펼쳐보기 <img src="img/down-s.png" alt="down-s"></button>
+                    <div class="footer_info1_add_wrap">
+                        <div class="add_wrap_1">
+                            <ul>
+                                <li>대표이사 : 서영택</li>
+                                <li>사업자 등록 번호 : 423-88-00370</li>
+                                <li>호스팅 제공자 : (주)밀리의 서재</li>
+                            </ul>
+                        </div>
+                        <div class="add_wrap_2">
+                            <ul>
+                                <li>통신 판매업 신고 번호 : 2016-서울마포-2012호</li>
+                                <li>주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스 세아타워)</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="add_wrap_3">
+                            <a href="#">개인정보보호 관련 문의 : privacy@millie.town</a>
+                            <a href="#">마케팅 제휴 문의 : business@millie.town</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_info2">
+                    <ul>
+                        <li><a href="#">이용약관<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">개인정보처리방침<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">청소년보호정책<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">고객센터<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">B2B문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">콘텐츠 제휴문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">뷰어 다운로드<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="#">회사 소개<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                    </ul>
+                </div>
+                <div class="footer_lasttext">
+                    <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
