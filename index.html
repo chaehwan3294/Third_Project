@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -131,33 +132,6 @@
             </div>
         </div>
 
-        <script>
-            var search;
-            search=["이상","이","스티븐 킹","베르나르 베르베르","댄 브라운"]
-
-            for(i=0;i<search.length;i++){
-
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: search[i] },
-                async: false,
-                headers: { Authorization: "KakaoAK fd08f36bd9fb9e3c842768cd0731e0b4" }
-            })
-            .done(function (msg) {
-
-            var lab = document.getElementsByClassName("lab"+i);
-
-            for (var j = 0; j < lab.length; j++) {
-
-            $(".lab"+i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
-            $(".lab"+i).eq(j).append("<h3>" +msg.documents[j].title + "</h3>");
-            $(".lab"+i).eq(j).append("<h6>" + msg.documents[j].authors + "</h6>");
-                }
-            });
-        }
-        </script>
-
         <div id="mid_bottom">
             <div class="mid_bottom_title">
                 <h2>
@@ -224,39 +198,6 @@
                 <div class="box4 box"></div>
             </div>
         </div>
-
-        <script>
-            var search;
-            search=["경제","영어","고전","인테리어","운동"]
-
-            for(i=0;i<search.length;i++){
-
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: search[i] },
-                async: false,
-                headers: { Authorization: "KakaoAK fd08f36bd9fb9e3c842768cd0731e0b4" }
-            })
-            .done(function (msg) {
-
-            var lab = document.getElementsByClassName("box"+i);
-
-            for (var j = 0; j < lab.length; j++) {
-
-            $(".box"+i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
-            $(".box"+i).eq(j).append("<h3>" +msg.documents[j].title + "</h3>");
-            $(".box"+i).eq(j).append("<h6>" + msg.documents[j].authors + "</h6>");
-                }
-            });
-        }
-        $(".mid_bottom_ul li").click(function(){
-                    let i=$(this).index();
-
-                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"white","color":"black"})
-                    $(".mid_bottom_lab").eq(i).show().css("display","flex").siblings(".mid_bottom_lab").hide()
-                });
-        </script>
 
         <div id="mid_ad">
             <div class="ad_wrap">
@@ -358,11 +299,13 @@
                         <div class="place_listen_l">
                             <div class="listen_u">
                                 <img src="img/listen_u.png" alt="listen_u">
-                                <h1>오디오북</h1>
-                                <h3>
-                                    세상에서 가장 <br>
-                                    교양있는 수면제
-                                </h3>
+                                <div class="listen_u_title">
+                                    <h1>오디오북</h1>
+                                    <h3>
+                                        세상에서 가장 <br>
+                                        교양있는 수면제
+                                    </h3>
+                                </div>
                             </div>
                             <div class="listen_d">
                                 <div class="listenbox listen1">
@@ -419,11 +362,13 @@
                         <div class="place_viewer_l">
                             <div class="viewer_u">
                                 <img src="img/viewer_u.png" alt="viewer_u">
-                                <h1>밀리 뷰어</h1>
-                                <h3>
-                                    독서를 위한 가장<br>
-                                    완벽한 도구
-                                </h3>
+                                <div class="viewer_u_title">
+                                    <h1>밀리 뷰어</h1>
+                                    <h3>
+                                        독서를 위한 가장<br>
+                                        완벽한 도구
+                                    </h3>
+                                </div>
                             </div>
                             <div class="viewer_d">
                                 <div class="viewerbox view1">
@@ -480,34 +425,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-                    $(".bot_menu_title_wrap").children().click(function(){
-                        let i=$(this).index();
-                        console.log(i)
-
-                        $(this).css({"background-color":"#f7f7f7"}).siblings().css({"background-color":"white"})
-                        $(".bot_menu_place").children().eq(i).show().css("display","flex").siblings().hide()
-                    })
-
-                    //listen
-                    $(".listenbox_num > ul > li").click(function(){
-                    let i=$(this).index();
-                    
-                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"#f7f7f7","color":"black"})
-                    $(".listenbox").eq(i).show().css("display","flex").siblings(".listenbox").hide()
-                    $(".listen_r_img").eq(i).show().css("display","block").siblings(".listen_r_img").hide()
-                    });
-
-                    //viewer
-                    $(".viewerbox_num > ul > li").click(function(){
-                    let i=$(this).index();
-                    
-                    $(this).css({"background-color":"black","color":"white"}).siblings().css({"background-color":"#f7f7f7","color":"black"})
-                    $(".viewerbox").eq(i).show().css("display","flex").siblings(".viewerbox").hide()
-                    $(".viewer_r_img").eq(i).show().css("display","block").siblings(".viewer_r_img").hide()
-                });
-        </script>
 
         <div id="review">
             <div class="review_wrap">
@@ -635,6 +552,9 @@
                 </div>
             </div>
         </footer>
+
+        <button class="fix_button"><b>첫 달 무료</b>로 독서 시작하기</button>
+
     </div>
 </body>
 </html>

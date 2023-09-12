@@ -242,6 +242,9 @@ footer {
   height: 223px;
   background-size: 346px;
   background-repeat: no-repeat;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .slide_logo {
@@ -250,6 +253,9 @@ footer {
   height: 47px;
   background-repeat: no-repeat;
   margin-top: 310px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 section {
@@ -262,6 +268,9 @@ section {
   height: 25%;
   margin: 0 auto;
   margin-top: 50px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .section_title > h2 {
@@ -325,6 +334,9 @@ section {
   margin: 0 auto;
   padding-top: 50px;
   margin-bottom: 70px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .mid_banner_title > h2 {
@@ -426,6 +438,9 @@ section {
   height: 15%;
   margin: 0 auto;
   padding-top: 50px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .index_title > h2 {
@@ -511,6 +526,9 @@ section {
   height: 40%;
   margin: 0 auto;
   padding-top: 50px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .mid_bottom_title > h2 {
@@ -550,6 +568,11 @@ section {
 
 .mid_bottom_ul > ul > li:hover {
   cursor: pointer;
+}
+
+.mid_bottom_ul > ul > li:first-child {
+  background-color: black;
+  color: white;
 }
 
 .lab_a {
@@ -635,10 +658,13 @@ section {
 }
 
 .ad_title {
-  width: 35%;
+  width: 36%;
   height: 40%;
   margin: 0 auto;
   padding-top: 50px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .ad_title > h2 {
@@ -668,6 +694,9 @@ section {
   position: absolute;
   bottom: 80px;
   left: 80px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: scale(0) translateY(200px);
 }
 
 .ad_img > img:nth-child(2) {
@@ -676,6 +705,9 @@ section {
   position: absolute;
   top: 120px;
   left: 180px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: scale(0) translateY(200px);
 }
 
 .ad_img > img:nth-child(3) {
@@ -703,6 +735,9 @@ section {
   position: absolute;
   top: 120px;
   right: 180px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: scale(0) translateY(200px);
 }
 
 .ad_img > img:nth-child(6) {
@@ -711,6 +746,9 @@ section {
   position: absolute;
   bottom: 80px;
   right: 80px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: scale(0) translateY(200px);
 }
 
 #bottom_banner {
@@ -730,6 +768,9 @@ section {
   height: 35%;
   margin: 0 auto;
   padding-top: 100px;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .bot_banner_title > h2 {
@@ -1027,14 +1068,20 @@ section {
   margin-bottom: 30px;
 }
 
-.listen_u > h1 {
+.listen_u_title {
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.listen_u_title > h1 {
   font-size: 49px;
   line-height: 130%;
   font-family: "HallymGothic-Regular";
   margin-bottom: 30px;
 }
 
-.listen_u > h3 {
+.listen_u_title > h3 {
   font-family: "HallymGothic-Regular";
   font-size: 22px;
   line-height: 160%;
@@ -1108,6 +1155,9 @@ section {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .place_listen_r > img {
@@ -1181,14 +1231,20 @@ section {
   margin-bottom: 30px;
 }
 
-.viewer_u > h1 {
+.viewer_u_title {
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.viewer_u_title > h1 {
   font-size: 49px;
   line-height: 130%;
   font-family: "HallymGothic-Regular";
   margin-bottom: 30px;
 }
 
-.viewer_u > h3 {
+.viewer_u_title > h3 {
   font-family: "HallymGothic-Regular";
   font-size: 22px;
   line-height: 160%;
@@ -1262,6 +1318,9 @@ section {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .place_viewer_r > img {
@@ -1364,6 +1423,9 @@ section {
   align-items: center;
   position: relative;
   z-index: 1;
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .review_text > h1 {
@@ -1469,6 +1531,23 @@ section {
   padding-top: 17px;
   display: none;
   border-top: 1px solid black;
+}
+
+.fix_button {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 60px;
+  border: none;
+  background-color: #666;
+  color: white;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "HallymGothic-Regular";
+  z-index: 100;
+  cursor: pointer;
 }
 
 @keyframes characterRight {
