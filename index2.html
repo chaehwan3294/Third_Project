@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -331,28 +333,27 @@
                                     </h2>
                                 </div>
                                 <div class="listenbox_num">
-                                    <ul>
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                    </ul>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="place_listen_r">
-                            <img src="img/listen_r.png" alt="listen_r">
-                            <div class="listen_r_img listen_img1">
-                                <img src="img/listen_r_img1.png" alt="listen_img1">
-                            </div>
-                            <div class="listen_r_img listen_img2">
-                                <video src="video/listen_r_img2.mp4" loop muted autoplay></video>
-                            </div>
-                            <div class="listen_r_img listen_img3">
-                                <img src="img/listen_r_img3.png" alt="listen_img3">
-                            </div>
-                            <div class="listen_r_img listen_img4">
-                                <img src="img/listen_r_img4.png" alt="listen_img4">
+                            <img src="img/listen_r.png" alt="listen_r" class="listen_r_phone">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img1.png" alt="listen_r_img1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <video src="video/listen_r_img2.mp4"></video>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img3.png" alt="listen_r_img3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img4.png" alt="listen_r_img4">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -423,6 +424,18 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                  return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+              },
+            });
+        </script>
 
         <div id="review">
             <div class="review_wrap">

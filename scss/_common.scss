@@ -108,25 +108,39 @@ footer {
     height: auto;
     margin-bottom: 30px;
 }
-.footer_info1 > button {
+.info_button {
+    cursor: pointer;
+}
+.info_button > button {
     border: none;
     background-color: white;
     padding-right: 14px;
     font-size: 10px;
     color: #a5a5a5;
     cursor: pointer;
+    float: left;
 }
-.footer_info1 > button > img {
+.info_down {
+    background-image: url(../img/down-s.png);
+    background-size: cover;
+    float: left;
     width: 10px;
     height: 10px;
+    margin-top: 2px;
+    margin-left: -15px;
 }
+.info_up {
+    transform: rotate(180deg);
+}
+
 .footer_info1_add_wrap {
     display: flex;
     flex-direction: column;
-    margin-top: 8px;
+    margin-top: 20px;
     font-size: 10px;
     color: #a5a5a5;
     display: none;
+    clear: both;
 }
 .add_wrap_1  > ul {
     display: flex;

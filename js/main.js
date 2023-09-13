@@ -195,7 +195,7 @@ $(function(){
         } else {
             $('.place_listen_r').css("transform", "translateY(100px)").css("opacity", "0");
         }
-        if (wdb > box8 + 600){ 
+        if (wdb > box8 + 900){ 
             $('.place_listen_r').css("transform", "translateY(100px)").css("opacity", "0");
         };
 
@@ -213,7 +213,7 @@ $(function(){
         } else {
             $('.place_viewer_r').css("transform", "translateY(100px)").css("opacity", "0");
         }
-        if (wdb > box8 + 600){ 
+        if (wdb > box8 + 900){ 
             $('.place_viewer_r').css("transform", "translateY(100px)").css("opacity", "0");
         };
 
@@ -267,4 +267,66 @@ $(function(){
             $('.ad_img > img:nth-child(6)').css({"transform": "scale(0) translateY(200px)"}).css("opacity", "0");
         };
     });
+
 })
+
+$(function(){
+    $(".mid_banner_img").click(function(){
+        $(".mid_banner_img > img").css({"display":"none"})
+        $(".mid_banner_img > video").css({"display":"block"})
+    })
+
+    let vid1=document.getElementsByClassName("mid_video1")[0]
+    vid1.onended=function(){
+        $(".mid_banner_img > video").css({"display":"none"})
+        $(".mid_banner_img > img").css({"display":"block"})
+    }
+
+    $(".review_img").click(function(){
+        $(".review_img1").css({"display":"none"})
+        $(".review_img_video").css({"display":"block"})
+    })
+
+    let vid2=document.getElementsByClassName("review_img_video")[0]
+    vid2.onended=function(){
+        $(".review_img_video").css({"display":"none"})
+        $(".review_img1").css({"display":"block"})
+    }
+})
+
+$(function(){
+    
+    $(".qna_num_title > .qna_down").click(function(){
+        $(this).toggleClass("qna_up");
+        $(this).parent().siblings().slideToggle()
+    })
+
+    $(".info_button").click(function(){
+        $(".info_down").toggleClass("info_up");
+        $(".footer_info1_add_wrap").slideToggle()
+    })
+
+})
+
+
+// $(function () {
+//     $(window).scroll(function () {
+//         let wdb = $(this).scrollTop();
+
+//         let index1 = $('#index').offset().top;
+
+//         if (wdb > index1 - 500) {
+//             $('.book1').fadeIn().css({"display":"flex","opacity": "1"});
+//         }
+//         if (wdb > index1 - 500) {
+//             $('.book2').fadeIn().css({"display":"flex","opacity": "1"});
+//         }
+//         if (wdb > index1 - 500) {
+//             $('.book3').fadeIn().css({"display":"flex","opacity": "1"});
+//         }
+//         if (wdb > index1 - 500) {
+//             $('.book4').fadeIn().css({"display":"flex","opacity": "1"});
+//         }
+
+//     })
+// })

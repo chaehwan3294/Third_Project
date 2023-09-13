@@ -229,6 +229,47 @@ footer {
   color: #6f6f6f;
 }
 
+.swiper {
+  width: 330px;
+  height: 651px;
+  z-index: 1;
+  border-radius: 37px;
+  display: flex;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 330px;
+  height: 651px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
 @font-face {
   font-family: "HallymGothic-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2") format("woff2");
@@ -1066,7 +1107,7 @@ section {
 }
 
 .place_listen_l {
-  width: 50%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1168,7 +1209,7 @@ section {
 }
 
 .place_listen_r {
-  width: 50%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -1184,9 +1225,9 @@ section {
   width: 330px;
   height: 681px;
   position: absolute;
-  right: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   z-index: 100;
 }
