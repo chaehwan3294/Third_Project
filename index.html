@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -17,9 +19,9 @@
                 </div>
                 <div class="header_menu">
                     <ul class="menu_ul">
-                        <li><a href="#">기업문의</a></li>
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">계정관리</a></li>
+                        <li><a href="sub.html">기업문의</a></li>
+                        <li><a href="sub.html">회사소개</a></li>
+                        <li><a href="sub.html">계정관리</a></li>
                     </ul>
                     <button class="login">로그인</button>
                 </div>
@@ -280,7 +282,7 @@
 
         <div id="bottom_menu">
             <div class="bot_menu_title">
-                <dic class="bot_menu_title_wrap">
+                <div class="bot_menu_title_wrap">
                     <div class="bot_menu_listen">
                         <img src="img/listen.png" alt="listen">
                         <p>오디오북</p>
@@ -289,7 +291,7 @@
                         <img src="img/viewer.png" alt="viewer">
                         <p>밀리 뷰어</p>
                     </div>
-                </dic>
+                </div>
             </div>
             <div class="bot_menu_wrap">
                 <div class="bot_menu_place">
@@ -331,31 +333,45 @@
                                     </h2>
                                 </div>
                                 <div class="listenbox_num">
-                                    <ul>
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                    </ul>
+                                    <div class="swiper-pagination swiper-pagination1"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="place_listen_r">
-                            <img src="img/listen_r.png" alt="listen_r">
-                            <div class="listen_r_img listen_img1">
-                                <img src="img/listen_r_img1.png" alt="listen_img1">
-                            </div>
-                            <div class="listen_r_img listen_img2">
-                                <video src="video/listen_r_img2.mp4" loop muted autoplay></video>
-                            </div>
-                            <div class="listen_r_img listen_img3">
-                                <img src="img/listen_r_img3.png" alt="listen_img3">
-                            </div>
-                            <div class="listen_r_img listen_img4">
-                                <img src="img/listen_r_img4.png" alt="listen_img4">
+                            <img src="img/listen_r.png" alt="listen_r" class="listen_r_phone">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img1.png" alt="listen_r_img1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <video src="video/listen_r_img2.mp4" muted autoplay loop></video>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img3.png" alt="listen_r_img3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/listen_r_img4.png" alt="listen_r_img4">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- <script>
+                        var swiper = new Swiper(".mySwiper", {
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                                renderBullet: function (index, className) {
+                                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                                },
+                            },
+                        });
+
+                        
+                    </script> -->
+
                     <div class="bot_place_viewer">
                         <div class="place_viewer_l">
                             <div class="viewer_u">
@@ -395,34 +411,45 @@
                                     </h2>
                                 </div>
                                 <div class="viewerbox_num">
-                                    <ul>
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                    </ul>
+                                    <div class="swiper-pagination swiper-pagination2"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="place_viewer_r">
                             <img src="img/listen_r.png" alt="listen_r">
-                            <div class="viewer_r_img viewer_img1">
-                                <video src="video/viewer1.mp4" loop muted autoplay></video>
-                            </div>
-                            <div class="viewer_r_img viewer_img2">
-                                <img src="img/viewer2.png" alt="viewer2">
-                            </div>
-                            <div class="viewer_r_img viewer_img3">
-                                <video src="video/viewer3.mp4" loop muted autoplay></video>
-                            </div>
-                            <div class="viewer_r_img viewer_img4">
-                                <video src="video/viewer4.mp4" loop muted autoplay></video>
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <video src="video/viewer1.mp4" muted autoplay loop></video>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/viewer2.png" alt="viewer2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <video src="video/viewer3.mp4" muted autoplay loop></video>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <video src="video/viewer4.mp4" muted autoplay loop></video>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        var swiper2 = new Swiper(".mySwiper2", {
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                                renderBullet: function (index, className) {
+                                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                                },
+                            },
+                        });
+                    </script>
                 </div>
             </div>
         </div>
+
 
         <div id="review">
             <div class="review_wrap">
@@ -497,10 +524,6 @@
             </div>
         </div>
 
-        <script>
-
-        </script>
-
         <footer>
             <div class="footer_wrap">
                 <div class="footer_title">
@@ -532,21 +555,21 @@
                         </div>
                         <br>
                         <div class="add_wrap_3">
-                            <a href="#">개인정보보호 관련 문의 : privacy@millie.town</a>
-                            <a href="#">마케팅 제휴 문의 : business@millie.town</a>
+                            <a href="sub.html">개인정보보호 관련 문의 : privacy@millie.town</a>
+                            <a href="sub.html">마케팅 제휴 문의 : business@millie.town</a>
                         </div>
                     </div>
                 </div>
                 <div class="footer_info2">
                     <ul>
-                        <li><a href="#">이용약관<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">개인정보처리방침<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">청소년보호정책<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">고객센터<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">B2B문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">콘텐츠 제휴문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">뷰어 다운로드<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
-                        <li><a href="#">회사 소개<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">이용약관<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">개인정보처리방침<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">청소년보호정책<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">고객센터<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">B2B문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">콘텐츠 제휴문의<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">뷰어 다운로드<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
+                        <li><a href="sub.html">회사 소개<img src="img/small-gray-arr.png" alt="small-gray-arr"></a></li>
                     </ul>
                 </div>
                 <div class="footer_lasttext">

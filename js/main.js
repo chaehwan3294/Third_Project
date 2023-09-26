@@ -1,4 +1,4 @@
-//
+//main
 
 
 $(function(){
@@ -306,6 +306,28 @@ $(function(){
         $(".footer_info1_add_wrap").slideToggle()
     })
 
+})
+
+$(function(){
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination1",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+        pagination: {
+            el: ".swiper-pagination2",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
 })
 
 

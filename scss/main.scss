@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import "reset","common";
+@import "reset","common","swiper";
 
 @font-face {
     font-family: 'HallymGothic-Regular';
@@ -785,7 +785,7 @@ section {
     flex-direction: row;
 }
 .place_listen_l {
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -850,27 +850,13 @@ section {
     font-weight: 400;
 }
 .listenbox_num {
-    width: 100%;
-    margin-top: 50px;
-}
-.listenbox_num > ul {
-    display: flex;
-    flex-direction: row;
-}
-.listenbox_num > ul > li {
-    padding: 3px 18px;
-    border: 1px solid black;
-    margin-right: 20px;
-    border-radius: 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
-.listenbox_num > ul > li:first-child {
-    background-color: black;
-    color: white;
-}
-.place_listen_r {
     width: 50%;
+    margin-top: 50px;
+    position: relative;
+}
+
+.place_listen_r {
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -885,11 +871,11 @@ section {
     width: 330px;
     height: 681px;
     position: absolute;
-    right: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%,-50%);
     overflow: hidden;
-    z-index: 100;
+    z-index: 1;
 }
 .listen_r_img {
     width: 330px;
@@ -928,7 +914,7 @@ section {
     flex-direction: row;
 }
 .place_viewer_l {
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -995,25 +981,10 @@ section {
 .viewerbox_num {
     width: 100%;
     margin-top: 50px;
-}
-.viewerbox_num > ul {
-    display: flex;
-    flex-direction: row;
-}
-.viewerbox_num > ul > li {
-    padding: 3px 18px;
-    border: 1px solid black;
-    margin-right: 20px;
-    border-radius: 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
-.viewerbox_num > ul > li:first-child {
-    background-color: black;
-    color: white;
+    position: relative;
 }
 .place_viewer_r {
-    width: 50%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -1022,12 +993,17 @@ section {
     transition: all 2s ease;
     opacity: 0;
     transform: translateY(100px);
+    position: relative;
 }
 .place_viewer_r > img {
     width: 330px;
     height: 681px;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    z-index: 1;
 }
 .viewer_r_img {
     width: 330px;
@@ -1228,7 +1204,6 @@ section {
     background-color: #fff;
     height: auto;
 }
-
 
 //fix_button
 

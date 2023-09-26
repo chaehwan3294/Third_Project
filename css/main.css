@@ -229,6 +229,83 @@ footer {
   color: #6f6f6f;
 }
 
+.swiper {
+  width: 300px;
+  height: 651px;
+  z-index: 1;
+  border-radius: 37px;
+  display: flex;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 300px;
+  height: 651px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-slide video {
+  width: 300px;
+  height: 651px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listenbox_num .swiper-pagination-bullet {
+  width: 45px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  color: black;
+  opacity: 1;
+  border: 1px solid black;
+  background-color: white;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.viewerbox_num .swiper-pagination-bullet {
+  width: 45px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  color: black;
+  opacity: 1;
+  border: 1px solid black;
+  background-color: white;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.listenbox_num .swiper-pagination-bullet-active {
+  color: white;
+  background: black;
+}
+
+.viewerbox_num .swiper-pagination-bullet-active {
+  color: white;
+  background: black;
+}
+
 @font-face {
   font-family: "HallymGothic-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2") format("woff2");
@@ -1066,7 +1143,7 @@ section {
 }
 
 .place_listen_l {
-  width: 50%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1144,31 +1221,13 @@ section {
 }
 
 .listenbox_num {
-  width: 100%;
+  width: 50%;
   margin-top: 50px;
-}
-
-.listenbox_num > ul {
-  display: flex;
-  flex-direction: row;
-}
-
-.listenbox_num > ul > li {
-  padding: 3px 18px;
-  border: 1px solid black;
-  margin-right: 20px;
-  border-radius: 15px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.listenbox_num > ul > li:first-child {
-  background-color: black;
-  color: white;
+  position: relative;
 }
 
 .place_listen_r {
-  width: 50%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -1184,11 +1243,11 @@ section {
   width: 330px;
   height: 681px;
   position: absolute;
-  right: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
-  z-index: 100;
+  z-index: 1;
 }
 
 .listen_r_img {
@@ -1235,7 +1294,7 @@ section {
 }
 
 .place_viewer_l {
-  width: 50%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1315,29 +1374,11 @@ section {
 .viewerbox_num {
   width: 100%;
   margin-top: 50px;
-}
-
-.viewerbox_num > ul {
-  display: flex;
-  flex-direction: row;
-}
-
-.viewerbox_num > ul > li {
-  padding: 3px 18px;
-  border: 1px solid black;
-  margin-right: 20px;
-  border-radius: 15px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.viewerbox_num > ul > li:first-child {
-  background-color: black;
-  color: white;
+  position: relative;
 }
 
 .place_viewer_r {
-  width: 50%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -1346,13 +1387,18 @@ section {
   transition: all 2s ease;
   opacity: 0;
   transform: translateY(100px);
+  position: relative;
 }
 
 .place_viewer_r > img {
   width: 330px;
   height: 681px;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 1;
 }
 
 .viewer_r_img {

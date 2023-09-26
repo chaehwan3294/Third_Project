@@ -1,0 +1,738 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#wrap {
+  width: 100%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  opacity: 0.8;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 0.5px solid lightgray;
+  z-index: 3;
+}
+
+.header_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  width: 54px;
+  height: 24px;
+  margin-left: 25px;
+}
+
+.header_logo > img {
+  width: 54px;
+  height: 24px;
+}
+
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.menu_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.menu_ul > li {
+  padding: 12px 24px;
+  font-weight: 700;
+  font-family: "HallymGothic-Regular";
+  font-size: 15.5px;
+}
+
+.login {
+  border: none;
+  background-color: black;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.login:hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+}
+
+.footer_wrap {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer_title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer_title > h3 {
+  font-size: 16px;
+}
+
+.footer_sns > img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.footer_info1 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.info_button {
+  cursor: pointer;
+}
+
+.info_button > button {
+  border: none;
+  background-color: white;
+  padding-right: 14px;
+  font-size: 10px;
+  color: #a5a5a5;
+  cursor: pointer;
+  float: left;
+}
+
+.info_down {
+  background-image: url(../img/down-s.png);
+  background-size: cover;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  margin-left: -15px;
+}
+
+.info_up {
+  transform: rotate(180deg);
+}
+
+.footer_info1_add_wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 10px;
+  color: #a5a5a5;
+  display: none;
+  clear: both;
+}
+
+.add_wrap_1 > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.add_wrap_1 > ul > li {
+  margin-right: 15px;
+}
+
+.add_wrap_2 > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.add_wrap_2 > ul > li {
+  margin-right: 15px;
+}
+
+.add_wrap_3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.add_wrap_3 > a {
+  margin-right: 15px;
+  color: #a5a5a5;
+}
+
+.footer_info2 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.footer_info2 > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_info2 > ul > li {
+  margin-right: 15px;
+}
+
+.footer_info2 > ul > li > a {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "HallymGothic-Regular";
+  color: #6f6f6f;
+}
+
+.footer_info2 > ul > li > a > img {
+  width: 12px;
+  height: 12px;
+  padding-top: 3px;
+}
+
+.footer_lasttext {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: "HallymGothic-Regular";
+  color: #6f6f6f;
+}
+
+@font-face {
+  font-family: "HallymGothic-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+#sub_main {
+  width: 1440px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+#sub_main .sub_main_l {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+#sub_main .sub_main_l img {
+  width: 270px;
+  height: 378px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+#sub_main .sub_main_r {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#sub_main .sub_main_r .sub_main_r_box {
+  width: 570px;
+  height: 530px;
+  border: 1px solid lightgray;
+  padding: 30px;
+}
+#sub_main .sub_main_r .sub_main_r_box h1 {
+  font-size: 28px;
+}
+#sub_main .sub_main_r .sub_main_r_box img {
+  width: 120px;
+  margin-right: 15px;
+  margin-top: 15px;
+  float: left;
+}
+#sub_main .sub_main_r .sub_main_r_box h5 {
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 18px;
+}
+#sub_main .sub_main_r .sub_main_r_box p {
+  font-size: 14px;
+  font-family: "HallymGothic-Regular";
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#sub_main .sub_main_r .sub_main_r_box h4 {
+  font-size: 16px;
+  font-family: "HallymGothic-Regular";
+  font-weight: 100;
+}
+#sub_main .sub_main_r .sub_main_r_box h4 b {
+  color: red;
+  font-size: 18px;
+}
+#sub_main .sub_main_r .sub_main_r_box h4 span {
+  font-size: 12px;
+  font-weight: 100;
+}
+#sub_main .sub_main_r .sub_main_r_box span {
+  font-size: 12px;
+  font-weight: 100;
+  font-family: "HallymGothic-Regular";
+}
+#sub_main .sub_main_r .sub_main_r_box select {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+}
+#sub_main .sub_main_r .main_r_box_btn {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_cart {
+  width: 16%;
+  height: 95%;
+  background-color: orangered;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_cart i {
+  font-size: 26px;
+  color: white;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_gift {
+  width: 38%;
+  height: 95%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_gift h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_buy {
+  width: 38%;
+  height: 95%;
+  background-color: gold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#sub_main .sub_main_r .main_r_box_btn .box_buy h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#book_info {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #f7f7f7;
+}
+#book_info .info_title_wrap {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+#book_info .info_title_wrap .sub_info_menu_bar {
+  width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_title {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  background-color: #f7f7f7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_title i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_title h5 {
+  font-size: 18px;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_etc {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_etc i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .info_etc h5 {
+  font-size: 18px;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .sub_review_title {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .sub_review_title i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#book_info .info_title_wrap .sub_info_menu_bar .sub_review_title h5 {
+  font-size: 18px;
+}
+#book_info .book_info_wrap {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+#book_info .book_info_wrap .sub_book_info {
+  padding: 20px;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox {
+  width: 100%;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox hr {
+  clear: both;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep {
+  width: 100%;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep p {
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep .book_deep_more {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  float: right;
+  margin-bottom: 30px;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep .book_deep_more::before {
+  content: "더보기";
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep .book_deep_more:checked::before {
+  content: "닫기";
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_deep > p:has(+ .book_deep_more:checked) {
+  -webkit-line-clamp: unset;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean {
+  width: 100%;
+  margin-bottom: 100px;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean p {
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean .book_mean_more {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  float: right;
+  margin-top: 50px;
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean .book_mean_more::before {
+  content: "더보기";
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean .book_mean_more:checked::before {
+  content: "닫기";
+}
+#book_info .book_info_wrap .sub_book_info .tmpbox .book_mean > p:has(+ .book_mean_more:checked) {
+  -webkit-line-clamp: unset;
+}
+#book_info .book_info_wrap .sub_info_etc {
+  padding: 30px;
+  display: none;
+}
+#book_info .book_info_wrap .sub_info_etc table {
+  margin-bottom: 50px;
+  margin-top: 30px;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  font-family: "HallymGothic-Regular";
+  border-collapse: collapse;
+}
+#book_info .book_info_wrap .sub_info_etc table tbody tr th {
+  border-right: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 100;
+  font-family: "HallymGothic-Regular";
+}
+#book_info .book_info_wrap .sub_info_etc table tbody tr td {
+  background-color: white;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: "HallymGothic-Regular";
+  text-align: left;
+  padding-left: 10px;
+}
+#book_info .book_info_wrap .sub_review {
+  display: none;
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+#book_info .book_info_wrap .sub_review .sub_review_title_2 {
+  width: 35%;
+  height: 120px;
+  padding-top: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#book_info .book_info_wrap .sub_review .sub_review_title_2 h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_title_2 h1 {
+  margin-left: 10px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap {
+  width: 100%;
+  height: 1600px;
+  padding: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article {
+  width: 35%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap {
+  width: 100%;
+  height: 180px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_title {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_title p {
+  width: 30px;
+  height: 22px;
+  padding-top: 3px;
+  font-family: "HallymGothic-Regular";
+  font-size: 12px;
+  border: 1px lightgray solid;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_title img {
+  width: 100px;
+  height: 22px;
+  margin-left: 25px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_main .article_hart {
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_main .article_hart p {
+  font-size: 12px;
+  float: left;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_main .article_hart span {
+  padding: 2px 5px;
+  margin-left: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_wrap .article_main .article_hart span b {
+  color: red;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_id {
+  width: 100%;
+  height: 20px;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap article .article_id p {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 3px;
+  font-family: "HallymGothic-Regular";
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap .article_num {
+  width: 35%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#book_info .book_info_wrap .sub_review .sub_review_wrap .article_num h3 {
+  cursor: pointer;
+}
+
+#book_etc {
+  width: 1440px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#book_etc .book_etc_title {
+  font-size: 17px;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+#book_etc .book_etc_title h3 {
+  font-family: "HallymGothic-Regular";
+}
+#book_etc .book_etc_wrap {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#book_etc .book_etc_wrap .etc {
+  width: 140px;
+  height: 60%;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+#book_etc .book_etc_wrap .etc img {
+  width: 138px;
+  height: 200px;
+}
+#book_etc .book_etc_wrap .etc h3 {
+  font-size: 13px;
+  text-align: center;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.fix_button {
+  display: none;
+}
